@@ -3,8 +3,10 @@ name: Personal Commit
 on:
   push:
     branches:
-      - mai
-      
+      - main
+  schedule:
+    - cron: '0 13 * * *'  # Ejecutar a las 8:00 AM hora Perú (13:00 UTC)
+
 jobs:
   commit:
     runs-on: ubuntu-latest
