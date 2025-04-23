@@ -19,10 +19,10 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const username = 'cristhopersocalay';  // Reemplaza con tu nombre de usuario real
+            const username = 'CristhoperSocalayR';  // Cambiado a tu nombre de usuario correcto
             const { data: repos } = await github.repos.listForUser({
               username: username,
-              per_page: 6,  // Número de repos a mostrar
+              per_page: 6,
               sort: 'updated',
               direction: 'desc'
             });
@@ -55,7 +55,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const username = 'cristhopersocalay';  // Reemplaza con tu nombre de usuario
+            const username = 'CristhoperSocalayR';  // Cambiado a tu nombre de usuario correcto
             const { data: repos } = await github.repos.listForUser({
               username: username,
               per_page: 100,
