@@ -19,7 +19,7 @@ jobs:
         with:
           github-token: ${{ github.token }}
           script: |
-            const username = 'CristhoperSocalayR';  // Cambiado a tu nombre de usuario correcto
+            const username = 'CristhoperSocalayR';  // Nombre de usuario correcto
             const { data: repos } = await github.repos.listForUser({
               username: username,
               per_page: 6,
@@ -55,7 +55,7 @@ jobs:
         with:
           github-token: ${{ github.token }}
           script: |
-            const username = 'CristhoperSocalayR';  // Cambiado a tu nombre de usuario correcto
+            const username = 'CristhoperSocalayR';  // Nombre de usuario correcto
             const { data: repos } = await github.repos.listForUser({
               username: username,
               per_page: 100,
@@ -110,6 +110,7 @@ jobs:
         with:
           MAX_LINES: 5
           COMMIT_MSG: 'docs: actualizar actividad reciente'
+          USERNAME: 'CristhoperSocalayR'
       
       # Actualizar WakaTime stats (opcional, necesitas configurar WakaTime)
       - name: Actualizar WakaTime stats
