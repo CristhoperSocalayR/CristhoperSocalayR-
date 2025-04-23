@@ -1,0 +1,142 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Ejecutar diariamente a las 00:00 UTC
+  workflow_dispatch:      # Permite ejecutar manualmente
+
+jobs:
+  update-readme:
+    name: Actualizar README con estadísticas de GitHub
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      # Actualizar proyectos/repositorios
+      - name: Obtener lista de repositorios
+        uses: actions/github-script@v4
+        id: get-repos
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const username = 'cristhopersocalay';  // Reemplaza con tu nombre de usuario real
+            const { data: repos } = await github.repos.listForUser({
+              username: username,
+              per_page: 6,  // Número de repos a mostrar
+              sort: 'updated',
+              direction: 'desc'
+            });
+            
+            let reposMarkdown = '<div align="center">\n';
+            
+            for (const repo of repos.slice(0, 6)) {
+              if (!repo.fork && !repo.private) {
+                const { data: languages } = await github.repos.listLanguages({
+                  owner: username,
+                  repo: repo.name
+                });
+                
+                const languagesList = Object.keys(languages).slice(0, 3).join(' · ');
+                
+                reposMarkdown += `<a href="${repo.html_url}">\n`;
+                reposMarkdown += `  <img width="32%" src="https://github-readme-stats.vercel.app/api/pin/?username=${username}&repo=${repo.name}&theme=tokyonight&hide_border=true" />\n`;
+                reposMarkdown += `</a>\n`;
+              }
+            }
+            
+            reposMarkdown += '</div>\n';
+            
+            return reposMarkdown;
+      
+      # Actualizar lista de habilidades basada en tus lenguajes
+      - name: Obtener habilidades basadas en lenguajes
+        uses: actions/github-script@v4
+        id: get-skills
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const username = 'cristhopersocalay';  // Reemplaza con tu nombre de usuario
+            const { data: repos } = await github.repos.listForUser({
+              username: username,
+              per_page: 100,
+              sort: 'updated',
+              direction: 'desc'
+            });
+            
+            const languageCount = {};
+            
+            for (const repo of repos) {
+              if (!repo.fork && !repo.private) {
+                const { data: languages } = await github.repos.listLanguages({
+                  owner: username,
+                  repo: repo.name
+                });
+                
+                for (const lang in languages) {
+                  languageCount[lang] = (languageCount[lang] || 0) + languages[lang];
+                }
+              }
+            }
+            
+            // Convertir a array y ordenar por frecuencia de uso
+            const sortedLangs = Object.entries(languageCount)
+              .sort((a, b) => b[1] - a[1])
+              .map(item => item[0]);
+            
+            // Generar badges para cada lenguaje con estilo moderno
+            let skillsMarkdown = '';
+            
+            // Mapeo de algunos lenguajes populares a sus íconos en skillicons.dev
+            const commonLangs = ['JavaScript', 'TypeScript', 'Python', 'Java', 'C#', 'PHP', 'Go', 'Ruby', 'Swift', 'Kotlin', 'HTML', 'CSS'];
+            const langIcons = sortedLangs.filter(lang => commonLangs.includes(lang)).map(lang => lang.toLowerCase());
+            
+            if (langIcons.length > 0) {
+              skillsMarkdown += `<img src="https://skillicons.dev/icons?i=${langIcons.join(',')}&theme=dark" />\n`;
+            }
+            
+            // Para lenguajes no comunes, usar badges
+            const otherLangs = sortedLangs.filter(lang => !commonLangs.includes(lang));
+            for (const lang of otherLangs) {
+              skillsMarkdown += `<img src="https://img.shields.io/badge/-${lang}-555555?style=for-the-badge&logo=${lang.toLowerCase()}&logoColor=white" alt="${lang}" /> `;
+            }
+            
+            return skillsMarkdown;
+      
+      # Actualizar actividad reciente
+      - name: Actualizar actividad reciente
+        uses: jamesgeorge007/github-activity-readme@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          MAX_LINES: 5
+          COMMIT_MSG: 'docs: actualizar actividad reciente'
+      
+      # Actualizar WakaTime stats (opcional, necesitas configurar WakaTime)
+      - name: Actualizar WakaTime stats
+        uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+      
+      # Actualizar el README
+      - name: Actualizar secciones en README
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "<!-- PROYECTOS-LIST:START -->(.|\n)*?<!-- PROYECTOS-LIST:END -->"
+          replace: "<!-- PROYECTOS-LIST:START -->\n${{ steps.get-repos.outputs.result }}\n<!-- PROYECTOS-LIST:END -->"
+          include: "README.md"
+          
+      - name: Actualizar sección de habilidades
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "<!-- SKILLS-LIST:START -->(.|\n)*?<!-- SKILLS-LIST:END -->"
+          replace: "<!-- SKILLS-LIST:START -->\n${{ steps.get-skills.outputs.result }}\n<!-- SKILLS-LIST:END -->"
+          include: "README.md"
+      
+      # Commit y push de los cambios
+      - name: Commit y push
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "docs: actualizar README con las últimas estadísticas"
+          git push
