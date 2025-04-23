@@ -33,14 +33,6 @@ Desarrollador apasionado por crear soluciones tecnológicas que impacten positiv
 Constantemente aprendiendo nuevas tecnologías y metodologías para mejorar mis habilidades y ofrecer código de alta calidad.
 
 🚀 Proyectos Destacados:
-<div align="center">
-  <a href="https://github.com/cristhopersocalay/proyecto-destacado">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=cristhopersocalay&repo=proyecto-destacado&theme=tokyonight&hide_border=true" />
-  </a>
-  <a href="https://github.com/cristhopersocalay/otro-proyecto">
-    <img width="49%" src="https://github-readme-stats.vercel.app/api/pin/?username=cristhopersocalay&repo=otro-proyecto&theme=tokyonight&hide_border=true" />
-  </a>
-</div>
 <!-- PROYECTOS-LIST:START -->
 <!-- Esta sección será actualizada automáticamente por GitHub Actions -->
 <!-- PROYECTOS-LIST:END -->
