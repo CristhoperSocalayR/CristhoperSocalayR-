@@ -6,7 +6,7 @@
   <a href="https://linkedin.com/in/cristhopersocalay"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
   <a href="tel:+51982316366"><img src="https://img.shields.io/badge/Contacto-+51_982_316_366-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"></a>
   <a href="mailto:cristhoper.socalay@ejemplo.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>
-  <img src="https://komarev.com/ghpvc/?username=cristhopersocalay&style=for-the-badge&color=brightgreen" alt="Visitas al perfil">
+  <img src="https://komarev.com/ghpvc/?username=CristhoperSocalayR&style=for-the-badge&color=brightgreen" alt="Visitas al perfil">
 </p>
 
 <div align="center">
@@ -16,7 +16,7 @@
 ## 💫 Sobre mí
 
 <p align="center">
-  <img align="right" width="350" src="https://github-readme-stats.vercel.app/api/top-langs/?username=cristhopersocalay&layout=compact&hide_border=true&theme=tokyonight" alt="Lenguajes más usados">
+  <img align="right" width="350" src="https://github-readme-stats.vercel.app/api/top-langs/?username=CristhoperSocalayR&layout=compact&hide_border=true&theme=tokyonight" alt="Lenguajes más usados">
 </p>
 
 ```javascript
@@ -40,8 +40,8 @@ Constantemente aprendiendo nuevas tecnologías y metodologías para mejorar mis 
 📊 Estadísticas:
 
 <div align="center">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=cristhopersocalay&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=cristhopersocalay&theme=tokyonight&hide_border=true" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=CristhoperSocalayR&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
+  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=CristhoperSocalayR&theme=tokyonight&hide_border=true" />
 </div>
 
 ⏱️ Esta semana me dediqué a:
