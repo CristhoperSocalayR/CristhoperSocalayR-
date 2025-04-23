@@ -86,7 +86,7 @@ DevOps y herramientas:
   <img src="https://skillicons.dev/icons?i=git,docker,kubernetes,aws,gcp,azure,github,gitlab&theme=dark" />
 </p>
 
-📌 Actividad reciente:
+📌 Actividad recientes:
 
 <details>
   <summary>Ver mi actividad reciente en GitHub...</summary>
