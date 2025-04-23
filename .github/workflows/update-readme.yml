@@ -17,7 +17,7 @@ jobs:
         uses: actions/github-script@v4
         id: get-repos
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ github.token }}
           script: |
             const username = 'CristhoperSocalayR';  // Cambiado a tu nombre de usuario correcto
             const { data: repos } = await github.repos.listForUser({
@@ -53,7 +53,7 @@ jobs:
         uses: actions/github-script@v4
         id: get-skills
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ github.token }}
           script: |
             const username = 'CristhoperSocalayR';  // Cambiado a tu nombre de usuario correcto
             const { data: repos } = await github.repos.listForUser({
@@ -106,7 +106,7 @@ jobs:
       - name: Actualizar actividad reciente
         uses: jamesgeorge007/github-activity-readme@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
         with:
           MAX_LINES: 5
           COMMIT_MSG: 'docs: actualizar actividad reciente'
