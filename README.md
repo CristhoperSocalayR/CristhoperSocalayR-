@@ -7,6 +7,7 @@
   <a href="tel:+51982316366"><img src="https://img.shields.io/badge/-WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/></a>
   <a href="mailto:cristhoper.socalay@ejemplo.com"><img src="https://img.shields.io/badge/-Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
   <img src="https://komarev.com/ghpvc/?username=CristhoperSocalayR&style=for-the-badge&color=6366F1" alt="Visitas"/>
+  <img src="https://profile-counter.glitch.me/CristhoperSocalayR/count.svg?" style="height:28px; margin-left:10px; border-radius:4px;" alt="Contador de Visitas"/>
 </p>
 
 <div align="center">
@@ -85,6 +86,22 @@ Mi enfoque es el desarrollo centrado en el usuario y la implementación de soluc
 
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=CristhoperSocalayR&theme=nord&no-frame=true&column=7&no-bg=true" alt="trofeos" width="100%" />
+</div>
+
+<h2 align="center">🎮 Animaciones de Actividad</h2>
+
+<div align="center">
+  <p align="center"><i>Mi actividad de commits como animación snake</i></p>
+  <img src="https://raw.githubusercontent.com/CristhoperSocalayR/CristhoperSocalayR/output/snake.svg" alt="Snake animation" width="100%" />
+</div>
+
+<div align="center">
+  <p align="center"><i>Mis contribuciones en formato Pacman</i></p>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/CristhoperSocalayR/CristhoperSocalayR/output/pacman-contribution-graph-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/CristhoperSocalayR/CristhoperSocalayR/output/pacman-contribution-graph.svg">
+    <img alt="Pacman contribution graph" src="https://raw.githubusercontent.com/CristhoperSocalayR/CristhoperSocalayR/output/pacman-contribution-graph.svg" width="100%" />
+  </picture>
 </div>
 
 <h2 align="center">🔥 Proyectos Destacados</h2>
