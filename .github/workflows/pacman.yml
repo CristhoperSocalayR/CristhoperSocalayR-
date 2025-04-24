@@ -1,11 +1,13 @@
 name: Generate pacman animation
+
 on:
   schedule: # execute every 12 hours
     - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
     branches:
-    - main
+      - main
+
 jobs:
   generate:
     permissions:
@@ -13,22 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      # Necesitas hacer checkout del repositorio primero
+      # Checkout del repositorio
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Generar pacman-contribution-graph.svg
       - name: generate pacman-contribution-graph.svg
         uses: abozanona/pacman-contribution-graph@main
         with:
           github_user_name: ${{ github.repository_owner }}
-          
-      - name: generate pacman-contribution-graph-dark.svg
-        uses: abozanona/pacman-contribution-graph@main
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          theme_variant: dark
-          file_name: pacman-contribution-graph-dark.svg
-          
+
+      # Subir el gráfico generado al branch de salida
       - name: push pacman-contribution-graph to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
