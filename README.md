@@ -61,10 +61,28 @@ Mi enfoque es el desarrollo centrado en el usuario y la implementación de soluc
   <img src="https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white" height="37"/>
 </p>
 
+<h3 align="center">Análisis de Datos</h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/BigQuery-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white" height="37"/>
+  <img src="https://skillicons.dev/icons?i=python&theme=dark" />
+  <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" height="37"/>
+</p>
+
+<h3 align="center">Testing & QA</h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black" height="37"/>
+  <img src="https://img.shields.io/badge/Apache_JMeter-D22128?style=for-the-badge&logo=apache&logoColor=white" height="37"/>
+  <img src="https://img.shields.io/badge/SoapUI-FFCA28?style=for-the-badge&logo=postman&logoColor=black" height="37"/>
+  <img src="https://img.shields.io/badge/Mockito-83B81A?style=for-the-badge&logo=java&logoColor=white" height="37"/>
+</p>
+
 <h3 align="center">DevOps y Cloud</h3>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=docker,kubernetes,gcp,github,git&theme=dark" />
   <img src="https://img.shields.io/badge/Railway-131415?style=for-the-badge&logo=railway&logoColor=white" height="37"/>
+  <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" height="37"/>
+  <img src="https://img.shields.io/badge/CI/CD-2088FF?style=for-the-badge&logo=github-actions&logoColor=white" height="37"/>
+  <img src="https://img.shields.io/badge/Pipelines-2560E0?style=for-the-badge&logo=azure-pipelines&logoColor=white" height="37"/>
 </p>
 
 <h3 align="center">Móvil</h3>
@@ -75,6 +93,7 @@ Mi enfoque es el desarrollo centrado en el usuario y la implementación de soluc
 <h3 align="center">Otras Herramientas</h3>
 <p align="center">
   <img src="https://skillicons.dev/icons?i=vscode,eclipse,figma,postman,linux&theme=dark" />
+  <img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white" height="37"/>
 </p>
 
 <h2 align="center">📊 Estadísticas GitHub</h2>
